@@ -49,19 +49,19 @@ public class UserRegistration {
 			System.out.println(emailResult);
 		}
 	
-//PhoneNumber
-		System.out.println("Enter PhoneNumber:");
-		Scanner scanner3 = new Scanner(System.in);
-		String userInputPhonenum = scanner3.next();
+		//PhoneNumber
+				System.out.println("Enter PhoneNumber:");
+				Scanner scanner3 = new Scanner(System.in);
+				String userInputPhonenum = scanner3.next();
 
-		Pattern PhonenumRegExp = Pattern.compile("^[91+][[:space:]][0-9]$");
-		Matcher matchResultPhonenum = PhonenumRegExp.matcher(userInputPhonenum);
-		boolean PhonenumResult = matchResultemail.matches();
-		if (PhonenumResult == true) {
-			System.out.println(PhonenumResult);
-		} else {
-			System.out.println(PhonenumResult);
-		}
+				Pattern PhonenumRegExp = Pattern.compile("^[91+][[:space:]][0-9]$");
+				Matcher matchResultPhonenum = PhonenumRegExp.matcher(userInputPhonenum);
+				boolean PhonenumResult = matchResultemail.matches();
+				if (PhonenumResult == true) {
+					System.out.println(PhonenumResult);
+				} else {
+					System.out.println(PhonenumResult);
+				}
 	}
 }
 
