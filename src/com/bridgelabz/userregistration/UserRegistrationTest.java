@@ -46,8 +46,14 @@ public class UserRegistrationTest {
 		boolean PasswordR1Result=matchResult.matches();
 		return PasswordR1Result;
 	}
+	public static boolean PasswordR2Validation(String userInputPasswordR2)
+	{
+		Pattern PasswordR2RegExp=Pattern.compile("^[a-zA-Z0-9]{8,}$");
+		Matcher matchResult=PasswordR2RegExp.matcher(userInputPasswordR2);
+		boolean PasswordR2Result=matchResult.matches();
+		return PasswordR2Result;
+	}
 	
-
 }
 
 	
