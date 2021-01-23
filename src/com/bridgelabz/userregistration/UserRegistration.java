@@ -24,7 +24,31 @@ public class UserRegistration {
 		{
 			System.out.println(firstNameResult);
 		}
+	
+	
+
+
+    System.out.println("Enter Last Name:");
+    Scanner scanner1=new Scanner(System.in);
+	String userInputLastName=scanner1.next();
+
+	Pattern lastNameRegExp=Pattern.compile("^[A-Z]{1}[a-z]{2,}$");
+	Matcher matchResultLastName=lastNameRegExp.matcher(userInputLastName);
+	boolean lastNameResult=matchResultLastName.matches();
+	if(lastNameResult == true)
+	{
+		System.out.println(lastNameResult);
 	}
+	else
+	{
+		System.out.println(lastNameResult);
+	}
+
 }
+
+}
+	
+	
+
 
 
