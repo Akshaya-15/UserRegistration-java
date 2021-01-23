@@ -24,10 +24,10 @@ public class UserRegistrationTest {
 	@Test
 	public static boolean EmailValidation(String userInputEmail)
 	{
-		Pattern emailRegExp=Pattern.compile("^[a-zA-Z]{3}\\.[a-zA-Z]{1}@[a-zA-Z]{2}\\.([a-zA-Z]{2}\\.[a-zA-Z]{1,}$");
-		Matcher matchResult=emailRegExp.matcher(userInputEmail);
-		boolean emailResult=matchResult.matches();
-		return emailResult;
+		Pattern EmailRegExp=Pattern.compile("^[a-zA-Z]{3}\\.[a-zA-Z]{1}@[a-zA-Z]{2}\\.([a-zA-Z]{2}\\.[a-zA-Z]{1,}$");
+		Matcher matchResult=EmailRegExp.matcher(userInputEmail);
+		boolean EmailResult=matchResult.matches();
+		return EmailResult;
 	}
 	
 	@Test
@@ -38,8 +38,15 @@ public class UserRegistrationTest {
 		boolean PhonenumResult=matchResult.matches();
 		return PhonenumResult;
 	}
+	@Test
+	public static boolean PasswordR1Validation(String userInputPasswordR1)
+	{
+		Pattern PasswordR1RegExp=Pattern.compile("^[a-zA-Z0-9]{8,}$");
+		Matcher matchResult=PasswordR1RegExp.matcher(userInputPasswordR1);
+		boolean PasswordR1Result=matchResult.matches();
+		return PasswordR1Result;
+	}
 	
-
 
 }
 

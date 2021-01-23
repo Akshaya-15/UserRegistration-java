@@ -48,21 +48,32 @@ public class UserRegistration {
 		} else {
 			System.out.println(emailResult);
 		}
-	
-		//PhoneNumber
-				System.out.println("Enter PhoneNumber:");
-				Scanner scanner3 = new Scanner(System.in);
-				String userInputPhonenum = scanner3.next();
 
-				Pattern PhonenumRegExp = Pattern.compile("^[91+][[:space:]][0-9]$");
-				Matcher matchResultPhonenum = PhonenumRegExp.matcher(userInputPhonenum);
-				boolean PhonenumResult = matchResultemail.matches();
-				if (PhonenumResult == true) {
-					System.out.println(PhonenumResult);
-				} else {
-					System.out.println(PhonenumResult);
-				}
+// PhoneNumber
+		System.out.println("Enter PhoneNumber:");
+		Scanner scanner3 = new Scanner(System.in);
+		String userInputPhonenum = scanner3.next();
+
+		Pattern PhonenumRegExp = Pattern.compile("^[91+][[:space:]][0-9]$");
+		Matcher matchResultPhonenum = PhonenumRegExp.matcher(userInputPhonenum);
+		boolean PhonenumResult = matchResultemail.matches();
+		if (PhonenumResult == true) {
+			System.out.println(PhonenumResult);
+		} else {
+			System.out.println(PhonenumResult);
+		}
+// Password Rule1
+		System.out.println("Enter Password Rule1:");
+		Scanner scanner4 = new Scanner(System.in);
+		String userInputPasswordR1 = scanner4.next();
+
+		Pattern PasswordR1RegExp = Pattern.compile("^[a-zA-Z0-9]{8,}$");
+		Matcher matchResultPasswordR1 = PasswordR1RegExp.matcher(userInputPasswordR1);
+		boolean PasswordR1Result = matchResultPasswordR1.matches();
+		if (PasswordR1Result == true) {
+			System.out.println(PasswordR1Result);
+		} else {
+			System.out.println(PasswordR1Result);
+		}
 	}
 }
-
-
