@@ -40,7 +40,7 @@ public class UserRegistration {
 		Scanner scanner2 = new Scanner(System.in);
 		String userInputemail = scanner2.next();
 
-		Pattern emailRegExp = Pattern.compile("^[a-zA-Z]{3}\\.[a-zA-Z]{1}@[a-zA-Z]{2}\\.([a-zA-Z]{2}\\.[a-zA-Z]{1,}$");
+		Pattern emailRegExp = Pattern.compile("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,4})*$");
 		Matcher matchResultemail = emailRegExp.matcher(userInputemail);
 		boolean emailResult = matchResultemail.matches();
 		if (emailResult == true) {

@@ -24,7 +24,7 @@ public class UserRegistrationTest {
 	@Test
 	public static boolean EmailValidation(String userInputEmail)
 	{
-		Pattern EmailRegExp=Pattern.compile("^[a-zA-Z]{3}\\.[a-zA-Z]{1}@[a-zA-Z]{2}\\.([a-zA-Z]{2}\\.[a-zA-Z]{1,}$");
+		Pattern EmailRegExp=Pattern.compile("^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2,4})*$");
 		Matcher matchResult=EmailRegExp.matcher(userInputEmail);
 		boolean EmailResult=matchResult.matches();
 		return EmailResult;
