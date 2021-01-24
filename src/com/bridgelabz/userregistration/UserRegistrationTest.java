@@ -48,7 +48,7 @@ public class UserRegistrationTest {
 	}
 	public static boolean PasswordR2Validation(String userInputPasswordR2)
 	{
-		Pattern PasswordR2RegExp=Pattern.compile("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
+		Pattern PasswordR2RegExp=Pattern.compile("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$A");
 		Matcher matchResult=PasswordR2RegExp.matcher(userInputPasswordR2);
 		boolean PasswordR2Result=matchResult.matches();
 		return PasswordR2Result;
@@ -66,6 +66,13 @@ public class UserRegistrationTest {
 		Matcher matchResult=PasswordR4RegExp.matcher(userInputPasswordR4);
 		boolean PasswordR4Result=matchResult.matches();
 		return PasswordR4Result;
+	}
+	public static boolean EmailSamplesValidation(String userInputEmailSamples)
+	{
+		Pattern EmailSamplesRegExp=Pattern.compile("^^([a-zA-a0-9\\\\.\\\\-\\\\+]+)@([a-zA-Z0-9\\\\.]{1,5})([a-zA-Z\\\\.]+){1,3}([a-zA-Z]{1,3})$([a-zA-a0-9\\\\.\\\\-\\\\+]+)@([a-zA-Z0-9\\\\.]{1,5})([a-zA-Z\\\\.]+){1,3}([a-zA-Z]{1,3})$");
+		Matcher matchResult=EmailSamplesRegExp.matcher(userInputEmailSamples);
+		boolean EmailSamplesResult=matchResult.matches();
+		return EmailSamplesResult;
 	}
 }
 
