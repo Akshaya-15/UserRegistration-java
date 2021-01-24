@@ -91,7 +91,7 @@ public class UserRegistration {
 // Password Rule3
 		System.out.println("Enter Password Rule3:");
 		Scanner scanner6 = new Scanner(System.in);
-		String userInputPasswordR3 = scanner5.next();
+		String userInputPasswordR3 = scanner6.next();
 
 		Pattern PasswordR3RegExp = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
 		Matcher matchResultPasswordR3= PasswordR3RegExp.matcher(userInputPasswordR3);
@@ -101,5 +101,19 @@ public class UserRegistration {
 		} else {
 			System.out.println(PasswordR3Result);
 		}
+// Password Rule4
+				System.out.println("Enter Password Rule4:");
+				Scanner scanner7= new Scanner(System.in);
+				String userInputPasswordR4 = scanner7.next();
+
+				Pattern PasswordR4RegExp = Pattern.compile("^(?=*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
+				Matcher matchResultPasswordR4= PasswordR4RegExp.matcher(userInputPasswordR4);
+				boolean PasswordR4Result = matchResultPasswordR4.matches();
+				if (PasswordR4Result == true) {
+					System.out.println(PasswordR4Result);
+				} else {
+					System.out.println(PasswordR4Result);
+				}
+		
 	}
 }

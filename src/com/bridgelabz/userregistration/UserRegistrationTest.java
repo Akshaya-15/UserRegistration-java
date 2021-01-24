@@ -48,17 +48,24 @@ public class UserRegistrationTest {
 	}
 	public static boolean PasswordR2Validation(String userInputPasswordR2)
 	{
-		Pattern PasswordR2RegExp=Pattern.compile("^[a-zA-Z0-9]{8,}$");
+		Pattern PasswordR2RegExp=Pattern.compile("^(?=.*[A-Z])[a-zA-Z0-9]{8,}$");
 		Matcher matchResult=PasswordR2RegExp.matcher(userInputPasswordR2);
 		boolean PasswordR2Result=matchResult.matches();
 		return PasswordR2Result;
 	}
 	public static boolean PasswordR3Validation(String userInputPasswordR3)
 	{
-		Pattern PasswordR3RegExp=Pattern.compile("^[a-zA-Z0-9]{8,}$");
+		Pattern PasswordR3RegExp=Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
 		Matcher matchResult=PasswordR3RegExp.matcher(userInputPasswordR3);
 		boolean PasswordR3Result=matchResult.matches();
 		return PasswordR3Result;
+	}
+	public static boolean PasswordR4Validation(String userInputPasswordR4)
+	{
+		Pattern PasswordR4RegExp=Pattern.compile("^(?=*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
+		Matcher matchResult=PasswordR4RegExp.matcher(userInputPasswordR4);
+		boolean PasswordR4Result=matchResult.matches();
+		return PasswordR4Result;
 	}
 }
 
