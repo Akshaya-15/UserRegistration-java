@@ -88,5 +88,18 @@ public class UserRegistration {
 		} else {
 			System.out.println(PasswordR2Result);
 		}
+// Password Rule3
+		System.out.println("Enter Password Rule3:");
+		Scanner scanner6 = new Scanner(System.in);
+		String userInputPasswordR3 = scanner5.next();
+
+		Pattern PasswordR3RegExp = Pattern.compile("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,}$");
+		Matcher matchResultPasswordR3= PasswordR3RegExp.matcher(userInputPasswordR3);
+		boolean PasswordR3Result = matchResultPasswordR3.matches();
+		if (PasswordR3Result == true) {
+			System.out.println(PasswordR3Result);
+		} else {
+			System.out.println(PasswordR3Result);
+		}
 	}
 }
